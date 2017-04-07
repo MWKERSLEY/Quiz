@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML5 &#45; CSS3 &amp; JavaScript Quiz</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+    <!-- Font Mfizz -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link href="myCSS.css" type="text/css" rel="stylesheet">
+</head>
+    
+<body>
+    <header>
+        <div class="container-fluid header">
+
+        </div>
+        
+    </header>
+    
+    <section>    
+        <div class="container-fluid header2">
+            <div class="row">
+
+                <div id="head2_cont" class="col-xs-12 col-sm-12 col-lg-12">
+                    <div id="msg_hello">
+                        Hi, <label id="name_here"></label> Welcome! 
+                        <label id="overall_score"></label>
+                    </div>
+                    
+                    <p class="choose_quiz">Choose a quiz from the list below.</p>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+            
+    <main id="main_bd" class="no_events_hide">
+        <section id="quiz_grid">
+            <div id="quizes" class="container-fluid main_body">
+                <div class="row">
+                    <div class="col-md-2 col-md-offset-2">
+
+                        <button class="quiz_block" id="quiz_1" data-toggle="modal" data-target="#theQuiz" name="lessonsN" value="1">
+                            <div class="icon_title">
+                                <span><i class="icon-html5-alt"></i></span>
+                                <h5 id="q1_title">HTML5</h5>
+                            </div>
+                            <p id="quiz_score1" class="quiz_score">0%</p>
+                            <label class="correct_incorrect">0/0 correct answers</label>
+                        </button>
+
+                    </div>
+                    <div class="col-md-2">
+
+                        <button class="quiz_block" id="quiz_2" data-toggle="modal" data-target="#theQuiz" name="lessonsN" value="2">
+                            <div class="icon_title">
+                                <span><i class="icon-css3-alt"></i></span>
+                                <h5 id="q2_title">CSS3</h5>
+                            </div>
+                            <p id="quiz_score2" class="quiz_score">0%</p>
+                            <label class="correct_incorrect">0/0 correct answers</label>
+                        </button>
+
+                    </div>
+                    <div class="col-md-2">
+
+                        <button class="quiz_block" id="quiz_3" data-toggle="modal" data-target="#theQuiz" name="lessonsN" value="3">
+                            <div class="icon_title">
+                                <span><i class="icon-javascript-alt"></i></span>
+                                <h5 id="q3_title">JavaScript</h5>
+                            </div>
+                            <p id="quiz_score3" class="quiz_score">0%</p>
+                            <label class="correct_incorrect">0/0 correct answers</label>
+                        </button>
+
+                    </div>
+                    <div class="col-md-2">
+
+                        <button class="quiz_block" id="quiz_4" data-toggle="modal" data-target="#theQuiz" name="lessonsN" value="4">
+                            <div class="icon_title">
+                                <span><i class="icon-ghost"></i></span>
+                                <h5 id="q4_title">Random Trivia</h5>
+                            </div>
+                            <p id="quiz_score4" class="quiz_score">0%</p>
+                            <label class="correct_incorrect">0/0 correct answers</label>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        
+        <section id="actual_quiz">  
+            
+            <div class="col-xs-12 col-md-12">
+     
+<div class="modal fade bd-example-modal-lg" id="theQuiz" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">
+                    <span id="qAll_title"></span>
+                </h4>
+                <div class="mod_btns">
+                    <button id="start_quiz" type="button" class="btn btn-success">Start Quiz</button>
+                    
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>                    
+                </div>
+                <div class="mod_btns" id="difficultyC">
+                </div>
+            </div>
+            <div class="modal-body">
+                <div id="actual_quiz_all" class="quiz_display">
+                <div id="qAll_questions" class="hide">
+                     
+                    <div class="ques">
+                    <h2 id="question1"></h2><span id="question1_answer" class="tick" name="tick"></span>
+                    <select id="questions_1"></select>
+                    </div>
+
+                    <div class="ques">   
+                    <h2 id="question2"></h2><span id="question2_answer" class="tick" name="tick"></span>
+                    <select id="questions_2"></select>
+                    </div>
+
+                    <div class="ques">
+                    <h2 id="question3"></h2><span id="question3_answer" class="tick" name="tick"></span>
+                    <select id="questions_3"></select>
+                    </div>
+
+                    <div class="ques">
+                    <h2 id="question4"></h2><span id="question4_answer" class="tick" name="tick"></span>
+                    <select id="questions_4"></select>
+                    </div>
+
+                    <div class="ques">
+                    <h2 id="question5"></h2><span id="question5_answer" class="tick" name="tick"></span>
+                    <select id="questions_5"></select>
+                    </div>
+
+                    <div class="ques">
+                    <h2 id="question6"></h2><span id="question6_answer" class="tick" name="tick"></span>
+                    <select id="questions_6"></select>
+                    </div>
+
+                    <div class="ques">
+                    <h2 id="question7"></h2><span id="question7_answer" class="tick" name="tick"></span>
+                    <select id="questions_7"></select>
+                    </div>
+                    
+                    <div class="ques">
+                    <h2 id="question8"></h2><span id="question8_answer" class="tick" name="tick"></span>
+                    <select id="questions_8"></select>
+                    </div>
+
+                    <button type="button" id="submit_answer" class="submit_answer btn btn-primary">Check Answers</button><span id="rightWrong"></span>
+                                    
+                </div>
+                    
+                    <br>
+                <label id="quiz_1_resp"></label>
+                    <br>
+                <label id="quiz_2_resp"></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                    
+                        
+                
+            </div>
+          
+        </section>
+  
+    </main>
+
+    <script src="jquery-1.11.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="myJS.js"></script>
+
+</body>
+    
+</html>
